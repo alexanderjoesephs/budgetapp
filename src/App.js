@@ -43,7 +43,7 @@ const AddExpenseForm = (props) => {
         <input
           type="text"
           value = {expenseValue}
-          placeholder="Expense"
+          placeholder="Item"
           onChange ={(event) => setExpenseValue(event.target.value)}
         />
         <input
