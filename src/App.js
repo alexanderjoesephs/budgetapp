@@ -54,6 +54,7 @@ const AddExpenseForm = (props) => {
         />
         <input
           type="submit"
+          className = "form-but"
           value="Add Expense"
         />
       </form>
@@ -98,6 +99,7 @@ const SetBudget = (props) => {
           onChange ={(event) => setValue(event.target.value)}
         />
         <input
+          className="form-but"
           type="submit"
           value="Set Budget"
         />
