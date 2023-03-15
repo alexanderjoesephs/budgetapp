@@ -7,7 +7,7 @@ const ShowRemainingBudget = (props) => {
   if(props.remainingBudget>0){
     return(
       <div>
-        <p>You still have {props.remainingBudget} left over after expenses.</p>
+        <p>You still have £{props.remainingBudget.toFixed(2)} left over after expenses.</p>
       </div>
     )
   }
@@ -33,7 +33,7 @@ const AddExpenseForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.addExpense(expenseValue, parseInt(costValue));
+    props.addExpense(expenseValue, parseFloat(costValue));
     setExpenseValue("");
     setCostValue("");
   }
@@ -74,7 +74,7 @@ const ShowExpense = (props) => {
 
 
 const ShowBudget = (props) => {
-  return(<p>Your budget is {props.amount}</p>)
+  return(<p>Your budget is £{props.amount.toFixed(2)}</p>)
 }
 
 
@@ -83,7 +83,7 @@ const SetBudget = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.budget(parseInt(value));
+    props.budget(parseFloat(value));
     setValue("");
   }
 
@@ -94,12 +94,12 @@ const SetBudget = (props) => {
         
           type="number"
           value = {value}
-          placeholder="Add to your budget"
+          placeholder="Enter your budget here"
           onChange ={(event) => setValue(event.target.value)}
         />
         <input
           type="submit"
-          value="Add to Budget"
+          value="Set Budget"
         />
       </form>
     </div>
@@ -119,10 +119,11 @@ function App() {
 
   const [nextExpenseId, setNextExpenseId] = useState(1)
 
+  
 
   const handleBudget = (amount) => {
-    if(!isNaN(amount)){
-      setBudget( prevBudget => prevBudget + amount )
+    if(!isNaN(amount) && amount>0){
+      setBudget( () =>  amount )
     }
   }
 
