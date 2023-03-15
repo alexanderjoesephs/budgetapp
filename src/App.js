@@ -14,7 +14,7 @@ const ShowRemainingBudget = (props) => {
   if(props.remainingBudget<0){
     return(
       <div>
-        <p>You're over budget by {-props.remainingBudget}.</p>
+        <p>You're over budget by £{-props.remainingBudget.toFixed(2)}.</p>
       </div>
     )
   }
