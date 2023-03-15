@@ -1,0 +1,61 @@
+html { 
+  background: url('../public/image.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
+
+.App{
+  border-radius: 25px;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 520px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.item{
+  margin-top:15px;
+  margin-bottom:5px;
+  margin-left:5px;
+  margin-right:5px;
+  padding:5px;
+  background-color: #FFF4EB	;
+  border-radius: 25px;
+  
+}
+
+
+
+
+
+input {
+  padding: 10px;
+  margin: 5px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+
+
+.but{
+  background-color: Transparent;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius: 5px;
+  text-align: center;
+  
+}
+
