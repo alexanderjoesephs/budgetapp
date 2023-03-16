@@ -125,7 +125,7 @@ function App() {
 
   const handleBudget = (amount) => {
     if(!isNaN(amount) && amount>0){
-      setBudget( () =>  amount )
+      setBudget( amount )
     }
   }
 
